@@ -1,0 +1,103 @@
+<ion-view hide-back-button="false" view-title="PROFILE">
+    <ion-nav-buttons side="left">
+        <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="goBack()" >Back</a>
+    </ion-nav-buttons>
+
+    <ion-content class="padding profile scroll-content ionic-scroll  has-header has-footer">
+        <form name="">
+            <div class="row">
+                <div class="col col-20">
+                    <span>
+                        <i class="ion-email"></i>
+                    </span>
+                </div>
+                <div class="col col-80">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">E-mail</span>
+                        <input type="text" value="{{email}}" ng-readonly=true>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-20">
+                    <span>
+                        <i class="ion-code"></i>
+                    </span>
+                </div>
+                <!--div class="col col-80">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Your referral code</span>
+                        <input type="text" value="{{avatar}}" ng-readonly=true>
+                    </label>
+                </div-->
+            </div>
+            <!--div class="row">
+                <div class="col col-20">
+                    <span>
+                        <i class="ion-code"></i>
+                    </span>
+                </div>
+                <div class="col col-80">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Your have referred</span>
+                        <br>
+                        <span style="font-weight:500;color:#D3D3D3">{{refcnt}} customer(s)</span>
+
+                    </label>
+                </div>
+            </div-->
+            <div class="row">
+                <div class="col col-20">
+                    <span>
+                        <i class="ion-android-person"></i>
+                    </span>
+                </div>
+                <div class="col col-80">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Name</span>
+                        <input type="text" ng-model="fname">
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-20">
+                    <span>
+                        <i class="ion-iphone"></i>
+                    </span>
+                </div>
+                <div class="col col-80">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Mobile</span>
+                        <input type="tel" ng-model="phone" pattern="^\d{3}\d{3}\d{4}$">
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-20">
+                    <span>
+                        <i class="ion-ios-locked"></i>
+                    </span>
+                </div>
+                <div class="col col-80">
+                    <label class="item item-input item-stacked-label" ng-click="showhide()">
+                        <span class="input-label">Password<span class="show_psw" ng-bind="showHideText"></span></span>
+                        <input id="upwd" type="password" ng-model="pwd">
+                    </label>
+                </div>
+            </div>
+            <div style="height:30px"></div>
+            <!-- <div>
+                <a class="button button-block main_btn" ng-click="saveuser1(fname,phone,pwd)">
+                    Save
+                </a>
+            <div> -->
+            <button class="button button-block main_btn" ng-click="saveLocation()"> Save my Location</button>
+        </form>
+    </ion-content>
+    <ion-footer-bar class="footer">
+
+    </ion-footer-bar>
+</ion-view>
+
+

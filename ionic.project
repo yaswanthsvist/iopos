@@ -1,0 +1,7 @@
+{
+  "name": "iopos",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "watch"
+  ]
+}

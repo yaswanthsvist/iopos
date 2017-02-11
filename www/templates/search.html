@@ -1,0 +1,28 @@
+<ion-view view-title="Search" class="has-sub-header">
+  <div class="pos_sub-header">
+    <label class="item item-input item-stacked-label">
+      <input ng-model="search.txt" ng-change="searchPrd()" placeholder="search here..." />
+    </label>
+  </div>
+  <ion-content  class="pos_content">
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right"  style="padding:5px" ng-repeat="item in searchList" type="item-text-wrap">
+        <div class="row">
+          <div class="col-90 pos_product_name">{{item.name}}</div>
+        </div>
+        <div class="row">
+          <div class="col-30 s-top-padd">
+            <i class="mrp-icon float-left"></i>
+            <span class="float-left">{{item.Price}}</span>
+          </div>
+          <div class="col-70 s-top-padd">
+            <i class="icon ion-android-star icon-custom-brand"></i>
+            <span  class="float-left">{{item.brand}}</span>
+          </div>
+        </div>
+        <p></p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

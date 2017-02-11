@@ -1,0 +1,38 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Transaction">
+  <ion-content class="padding">
+    <div class="list">
+        <!--div class="row item">
+          <div class="col-40">Item</div>
+          <div class="col-20 pos_right_align">Price</div>
+          <div class="col-15 pos_right_align">Qty</div>
+          <div class="col-25 pos_right_align">Total</div>
+        </div-->
+        <div ng-repeat="item in transaction.items" class="item pos_item">
+          <div class="row">
+            <div class="col-90 pos_product_name">{{item.name}}</div>
+          </div>
+          <div class="row">
+            <div class="col-30 s-top-padd">
+              <i class="mrp-icon float-left"></i>
+              <span class="float-left">{{item.price}}</span>
+            </div>
+            <div class="col-40 " ng-clidck="editQtyFn($index,item.bar_code);" >
+              <i class="minus-icon float-left" ng-click="updateItem($index,item.qty,item.bar_code,'--')"></i>
+                <input ng-model="item.qty" class="pos_input_qty float-left"></input>
+              <i class="plus-icon float-left" ng-click="updateItem($index,item.qty,item.bar_code,'++')"></i>
+            </div>
+            <div class="col-30 pos_right_align s-top-padd pos_item_price after-icon">
+              <i class="rupee-icon float-left"></i>
+              <span class="flaot-left">{{item.price*item.qty}}</span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

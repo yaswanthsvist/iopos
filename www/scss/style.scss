@@ -1,0 +1,389 @@
+/* Empty. Add your own CSS if you like */
+$even_bg: #e6f2fd;
+$odd_bg:  #e4fbdf;
+$header_clr: #d5217b;
+$footer_ht: 60px;
+
+
+.pos_icon_css{
+	background-size: 196%;
+    height: 32px;
+    width: 32px;
+    min-width: 20px;
+    display: block;
+    min-height: 20px;
+    background-position: center center;
+}
+.rupee-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/rupee.png');
+}
+.total-icon{
+	@extend .pos_icon_css;
+	background-size: 127%;
+    height: 31px;
+    width: 33px;
+    background-image: url('../img/total.png');
+}
+.mrp-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/mrp.png');
+    width: 30px;
+    height: 24px;
+}
+.plus-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/plus.png');
+    background-size: 150%;
+}
+.minus-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/minus.png');
+    background-size: 150%;
+}
+.add-cart-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/addCart.png');
+}
+.total-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/total.png');
+}
+.total-items-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/total_products.png');
+}
+.uncart-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/uncart.png');
+}
+.cart-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/total.png');
+}
+.item-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/item.png');
+}
+.inventory-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/inventory.png');
+}
+.bar-code-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/scanner.png');
+}
+.check-out-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/checkout.png');
+}
+.stock-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/stock.png');
+}
+.new-item-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/newItem.png');
+}
+.check-out-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/checkout.png');
+}
+.pos-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/possys.png');
+}
+.new-order-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/newOrder.png');
+}
+.open-drafts-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/opendrafts.png');
+}
+.transactions-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/transactions.png');
+}
+.transaction-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/transaction.png');
+}
+.date-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/date.png');
+}
+.save-pos-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/savedraft.png');
+}
+.search-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/search.png');
+}
+.open-pos-icon{
+	@extend .pos_icon_css;
+    background-image: url('../img/opendraft.png');
+}
+.tab-item .icon{
+	height:$footer_ht - 20px;
+	width:$footer_ht - 20px;
+	background-size: 165%;
+	margin-top:2px;
+}
+.tab-nav.tabs{
+	height:$footer_ht;
+}
+.pos_sub-header{
+	position: fixed;
+	top:42px;
+	height: 58px;
+    background-color: ghostwhite;
+    width: 100%;
+    padding-top:3px;
+}
+.pos_sub-header label{
+	padding:5px 18px 2px 18px;
+}
+.pos_content{
+    background-color: ghostwhite;
+}
+.has-sub-header .pos_content{
+	top:100px;
+}
+.pos_total{
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+}
+.after-icon i{
+	width:23px;
+	height:23px;
+	margin-right:4px;
+}
+.after-icon span{
+	float:right;
+}
+.pos_total p{
+	margin-bottom: 2px;
+}
+.pos_center{
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+    color: limegreen;
+}
+.text-stick-left{
+   font-size: 25px;
+   margin-left: 5px;
+}
+.col-30 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 30%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%; }
+.col-15 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 15%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 15%;
+  -ms-flex: 0 0 15%;
+  flex: 0 0 15%;
+  max-width: 15%; }
+.pos_right_align{
+	text-align: right;
+}
+.pos_item{
+	margin-top: 10px !important;
+    border: 0px;
+    box-shadow: 2px 3px 2px -1px #aeaeae;
+    border-radius: 3px;
+	padding-top: 0px !important;
+    padding-bottom: 1px;
+    padding:2px;
+    }
+.pos_item:nth-child(even){
+	background-color: $even_bg;
+	box-shadow: 2px 3px 2px -1px darken($even_bg,40%);
+}
+.pos_item:nth-child(odd){
+	background-color:$odd_bg;
+	box-shadow: 2px 3px 2px -1px darken($odd_bg,40%);
+}
+.inventory .pos_item,.transactions .pos_item{
+    height: auto;	
+}
+.pos_sub-header button{
+	height: 48px;
+}
+.pos_main_header{
+	background-color: $header_clr !important;
+}
+.pos_main_header .button{
+	color: $header_clr !important;
+	background-color: ghostwhite !important;
+}
+.pos_main_header .title{
+    color: #f8f8f8 !important;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.pos_item_price{
+	font-weight: 500;
+
+}
+.pos_product_name{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.tab-set-bottom .tabs{
+	bottom:0px;
+	top: initial;
+}
+.keyboard-open .tab-nav.tabs{
+  display: none;
+}
+.keyboard-open .has-tabs{
+  bottom:0px;
+}
+.pos_login_form{
+	margin-top:4vh;
+}
+.footer-btn{
+	bottom:0px;
+	position:fixed;
+	display:block;
+	background-color:$header_clr;
+	font-weight:600;
+	letter-spacing:3px;
+	font-size:17px;
+	text-align:center;
+	color:white;
+	height: 65px;
+    line-height: 3;
+}
+.pos_lable{
+	padding-right:16px;
+}
+.pos_lable input{
+	padding-left:2px;
+	padding-bottom:2px;
+	font-weight:600;
+	font-size:15px;
+	height:45px;
+}
+.pos_login_logo{
+	height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10vh;
+}
+.float-left{
+	float:left;
+}
+.float-right{
+	float:right;
+}
+.pos_input_qty{
+	padding:2px;
+	border-radius: 5px;
+    width: 35px;
+    height: 25px;
+    margin-top: 3px;
+    background-color: rgba(255,255,255,0.85);
+}
+.small-icon{
+    width: 21px;
+    height: 21px;
+}
+.medium-icon{
+    width: 25px;
+    height: 25px;
+}
+.s-top-padd{
+	padding-top:4px;
+}
+.m-top-padd{
+	padding-top:6px;
+}
+.sub-hdr-icon{
+	@extend .hdr-btn-icon;
+	margin-top:4px;
+}
+.s-right-padd{
+	padding-right:4px;
+}
+.hdr-btn-icon{
+	margin-right:4px;
+	min-width: 55px !important;
+	background-size: 65px;
+    height: 35px;
+}
+.pad-lr-4{
+	padding-right:4%;
+	padding-left:4%;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+div.mixin{
+	@include pseudo;
+	background-color:red;
+}
+
+
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false){
+    @include pseudo($pos: $position);
+    width: 0;
+    height: 0;
+    @if $round {
+        border-radius: 3px;
+    }
+    @if $direction == down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+        margin-top: 0 - round( $size / 2.5 );
+    } @else if $direction == up {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+        margin-bottom: 0 - round( $size / 2.5 );
+    } @else if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        margin-right: -$size;
+    } @else if  $direction == left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        margin-left: -$size;
+    }
+}
+
+div.upTri{
+	@include css-triangle("green","up",10px)
+}
+div.upTri1{
+	@include css-triangle("green","up",15px)
+}
+div.upTri2{
+	@include css-triangle("green","up",20px)
+}
+div.upTri3{
+	@include css-triangle("blue","up",10px)
+}
+div.upTri4{
+	@include css-triangle("green","down",10px)
+}

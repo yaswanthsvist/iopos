@@ -1,0 +1,24 @@
+<ion-view view-title="Transactions" class="transactions">
+  <ion-content class="pos_content">
+    <div class="list" >
+
+      <div ng-repeat="(txnTime,item) in transactions" ng-click="goToTransaction(item.transactionId)"  class="item pos_item pad-lr-4">
+        <div class="row" >
+            <div class="col-50 pos_left_align s-top-padd after-icon">
+                <i class="date-icon float-left"></i>
+                :{{item.transactionId|date:'short'}}
+            </div>
+            <div class="col-50 pos_right_align s-top-padd">
+                {{item.transactionId|timeAgo:'':'':"prefix"}}
+            </div>
+        </div>
+        <div class="row s-top-padd" style="margin-top:5px;margin-bottom:5px;">
+            <div class="col-50 pos_left_align after-icon">
+                <i class="rupee-icon float-left"></i>: {{item.total}}
+            </div>
+            <div class="col-50 pos_right_align">Items:{{item.totalProduct}}</div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

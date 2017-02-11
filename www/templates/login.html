@@ -1,0 +1,21 @@
+<ion-view view-title="Login" hide-nav-bar="true">
+  <ion-content class="pos_content">
+  <img src="img/byte pos.png" class="pos_login_logo"/>
+    <form ng-submit="login(user)" class="pos_login_form">
+        <label class="item item-input item-stacked-label pos_lable">
+         <input required ng-model="user.name" placeholder="username" />
+        </label>
+        <label class="item item-input item-stacked-label pos_lable">
+         <input required ng-model="user.pwd" placeholder="password" type="password" />
+        </label>
+        <button type="submit" class="button button-positive button-full">
+          LOGIN
+        </button>
+    </form>
+  </ion-content>
+  <div class="footer-btn bar bar-roayal" ng-click="goto('register');">
+    <p style="width:100%" class="footer_a">
+      DON'T HAVE AN ACCOUNT
+    </p>
+  <div>
+</ion-view>

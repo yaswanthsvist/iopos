@@ -1,0 +1,115 @@
+<ion-view hide-nav-bar="true" view-title="pos" class="has-sub-header">
+ <ion-header-bar  class="pos_main_header">
+  <div class="buttons ">
+      <button  class="button new-item-icon hdr-btn-icon" ng-click="addCustom();"></button>
+  </div>
+  <h1 class="title">Point of Sales</h1>
+  <div class="buttons">
+      <button class="button check-out-icon hdr-btn-icon" ng-click="checkOut()"></button>
+  </div>
+ </ion-header-bar>
+  <div class="row pos_sub-header">
+    <div class="col-30">
+      <button  class="button new-order-icon sub-hdr-icon" ng-click="addCustom();"></button>
+    </div>
+    <div class="col-40 pos_total">
+      <p>Total</p>
+      <span class="pos_center">
+        <i class="total-icon"></i>
+        <span class="text-stick-left" odometer="total"></span>
+      </span>
+    </div>
+    <div class="col-30">
+      <button class="button open-drafts-icon sub-hdr-icon float-right" ng-click="checkOut()"></button>
+    </div>
+  </div>
+  <ion-content class="padding pos_content">
+    <div class="list">
+        <div ng-repeat="item in items" class="item pos_item">
+          <div class="row">
+            <div class="col-90 pos_product_name">{{item.name}}</div>
+          </div>
+          <div class="row">
+            <div class="col-30 s-top-padd">
+              <i class="mrp-icon float-left"></i>
+              <span class="float-left">{{item.price}}</span>
+            </div>
+            <div class="col-40 " ng-clidck="editQtyFn($index,item.bar_code);" >
+              <i class="minus-icon float-left" ng-click="updateItem($index,item.qty,item.bar_code,'--')"></i>
+                <input ng-model="item.qty"  ng-change="updateItem($index,item.qty,item.bar_code,'')" class="pos_input_qty float-left"></input>
+              <i class="plus-icon float-left" ng-click="updateItem($index,item.qty,item.bar_code,'++')"></i>
+            </div>
+            <div class="col-30 pos_right_align s-top-padd pos_item_price after-icon">
+              <i class="rupee-icon float-left"></i>
+              <span class="flaot-left">{{item.price*item.qty}}</span>
+            </div>
+          </div>
+        </div>
+    </div>
+  </ion-content>
+<script id="productUpdate.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">Product</h1>
+    </ion-header-bar>
+    <ion-content>
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input ng-model="updateProduct.name" type="text">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Brand</span>
+          <input ng-model="updateProduct.brand" type="text">
+        </label>
+        <label class="item">
+          {{updateProduct.modalBarcode}}
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Price</span>
+          <input ng-model="updateProduct.price" type="number">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Cost</span>
+          <input ng-model="updateProduct.cost" type="number">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Quantity</span>
+          <input ng-model="updateProduct.qty" type="number">
+        </label>
+        <button ng-click="productUpdateInv(updateProduct);" class="button button-block button-positive">
+          Update
+        </button>
+        <button ng-click="cancelUpdate();" class="button button-block button-assertive">
+          Cancel
+        </button>
+    </ion-content>
+  </ion-modal-view>
+</script>
+<script id="addCustom.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">Custom Product</h1>
+    </ion-header-bar>
+    <ion-content>
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input ng-model="customProduct.name" type="text">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Price</span>
+          <input ng-model="customProduct.price" type="number">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Quantity</span>
+          <input ng-model="customProduct.qty" type="number" >
+        </label>
+        <button ng-click="addItem(customProduct);" class="button button-block button-positive">
+          Update
+        </button>
+        <button ng-click="cancelCustom();" class="button button-block button-assertive">
+          Cancel
+        </button>
+    </ion-content>
+  </ion-modal-view>
+</script>
+</ion-view>

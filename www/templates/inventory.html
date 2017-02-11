@@ -1,0 +1,93 @@
+<ion-view view-title="Inventory" hide-nav-bar="true" class="has-sub-header">
+ <ion-header-bar  class="pos_main_header">
+  <div class="buttons ">
+      <button  class="button barcode-icon hdr-btn-icon" ng-click="addBarcodeManually();"></button>
+  </div>
+  <h1 class="title">Inventory</h1>
+ </ion-header-bar>
+  <!--div class="row pos_sub-header">
+    <div class="col-60">
+      <button class="button button-positive" ng-click="addItem();">Shop type</button>
+      >
+      <button class="button button-positive" ng-click="addItem();">Category</button>
+    </div>
+    <div class="col-40">
+      <button class="button button-positive" ng-click="">Add</button>
+    </div>
+  </div-->
+  <ion-content class="pos_content">
+	<div class="list">
+        <div ng-repeat="item in inventory" class="item pos_item">
+  		  <div class="row">
+	          <div class="col-90 after-icon"><i class="item-icon float-left"></i>{{item.name}}</div>
+	      </div>
+          <div class="row m-top-padd">	
+        	<div class="col-50 pos_left_align m-top-padd after-icon"><i class="bar-code-icon float-left"></i>{{item.bar_code}}</div>
+          	<div class="col-25 pos_left_align m-top-padd after-icon"><i class="rupee-icon float-left"></i>{{item.price}}</div>
+          	<div class="col-25 pos_left_align m-top-padd after-icon"><i class="stock-icon float-left"></i>{{item.qty}}</div>
+          </div>
+        </div>
+    </div>
+  </ion-content>
+  <script id="productDetail.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">Product</h1>
+    </ion-header-bar>
+    <ion-content>
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input ng-model="updateProduct.name" type="text">
+        </label>
+        <label class="item">
+          {{modalBarcode}}
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Price</span>
+          <input ng-model="updateProduct.price" type="number">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Quantity</span>
+          <input ng-model="updateProduct.qty" type="number">
+        </label>
+        <button ng-click="productUpdateInv(updateProduct);" class="button button-block button-positive">
+          Update
+        </button>
+        <button ng-click="cancelUpdate();" class="button button-block button-assertive">
+          Cancel
+        </button>
+    </ion-content>
+  </ion-modal-view>
+  </script>
+  <script id="manualBarcodeUpdate.html" type="text/ng-template">
+    <ion-modal-view>
+      <ion-header-bar>
+        <h1 class="title">Product Barcode Update</h1>
+      </ion-header-bar>
+      <ion-content>
+          <label class="item item-input">
+            <span class="input-label">Name</span>
+            <input ng-model="updateProduct.name" type="text">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Barcode</span>
+            <input ng-model="updateProduct.modalBarcode" type="number">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Price</span>
+            <input ng-model="updateProduct.price" type="number">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Quantity</span>
+            <input ng-model="updateProduct.qty" type="number">
+          </label>
+          <button ng-click="manualBarcodeUpdate(updateProduct);" class="button button-block button-positive">
+            Update
+          </button>
+          <button ng-click="cancelManualBarcodeUpdate();" class="button button-block button-assertive">
+            Cancel
+          </button>
+      </ion-content>
+    </ion-modal-view>
+</script>
+</ion-view>
