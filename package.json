@@ -1,17 +1,60 @@
 {
-  "name": "ionic-project",
+  "name": "iopos",
   "version": "1.1.1",
-  "description": "An Ionic project",
+  "description": "Mobile POS App with Analytics",
   "dependencies": {
-    "gulp": "^3.5.6",
-    "gulp-sass": "^2.0.4",
-    "gulp-concat": "^2.2.0",
-    "gulp-minify-css": "^0.3.0",
-    "gulp-rename": "^1.2.0"
+    "cordova-plugin-googlemaps": "^1.3.9",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-minify-css": "^0.3.13",
+    "gulp-util": "^2.2.20",
+    "gulp-sass": "^2.3.2",
+    "shelljs": "^0.3.0"
   },
   "devDependencies": {
     "bower": "^1.3.3",
     "gulp-util": "^2.2.14",
     "shelljs": "^0.3.0"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-compat@1.0.1-dev",
+    "cordova-plugin-geolocation@2.2.1-dev"
+    "cordova-plugin-network-information@1.2.2-dev",
+    "cordova-plugin-whitelist@1.2.2",
+    "cz.blocshop.socketsforcordova@1.1.0",
+    "ionic-plugin-keyboard@2.2.1",
+    "org.apache.cordova.device@0.2.13",
+    "phonegap-plugin-barcodescanner@6.0.1",
+    "plugin.google.maps@1.3.9"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaswanthsvist/iopos.git"
+  },
+  "scripts": {
+    "postinstall": "ionic state restore",
+    "clean": "ionic platform remove android; ionic platform remove browser; git checkout package.json"
+  },
+  "keywords": [
+    "POS",
+    "Analytics",
+    "Search",
+    "Inventory",
+    "Barcode",
+    "Maps",
+    "Locations"
+  ],
+  "author": "Yaswanth M",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yaswanthsvist/iopos/issues"
+  },
+  "homepage": "https://github.com/yaswanthsvist/iopos/blob/master/README.md",
+  "cordovaPlatforms": [
+    "android@4.1.1",
+  ]
 }

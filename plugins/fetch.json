@@ -1,0 +1,68 @@
+{
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/apache/cordova-plugin-compat.git",
+            "subdir": "."
+        }
+    },
+    "cordova-plugin-geolocation": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/apache/cordova-plugin-geolocation.git",
+            "subdir": "."
+        }
+    },
+    "cordova-plugin-network-information": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/apache/cordova-plugin-network-information",
+            "subdir": "."
+        }
+    },
+    "cz.blocshop.socketsforcordova": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/blocshop/sockets-for-cordova",
+            "subdir": "."
+        }
+    },
+    "ionic-plugin-keyboard": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/driftyco/ionic-plugin-keyboard",
+            "subdir": "."
+        }
+    },
+    "org.apache.cordova.device": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.device"
+        }
+    },
+    "phonegap-plugin-barcodescanner": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/phonegap/phonegap-plugin-barcodescanner.git",
+            "subdir": "."
+        }
+    },
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "plugin.google.maps": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-googlemaps"
+        },
+        "is_top_level": true,
+        "variables": {
+            "API_KEY_FOR_ANDROID": "AIzaSyBHfRiWUwfh84osYd1JNno1dAgfhM44QXw"
+        }
+    }
+}

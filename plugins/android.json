@@ -1,0 +1,41 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.retail.iopos"
+        },
+        "plugin.google.maps": {
+            "API_KEY_FOR_ANDROID": "AIzaSyBHfRiWUwfh84osYd1JNno1dAgfhM44QXw",
+            "PACKAGE_NAME": "com.retail.iopos"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.retail.iopos"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.retail.iopos"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.retail.iopos"
+        },
+        "cz.blocshop.socketsforcordova": {
+            "PACKAGE_NAME": "com.retail.iopos"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.retail.iopos"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.retail.iopos"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.retail.iopos"
+        }
+    }
+}
