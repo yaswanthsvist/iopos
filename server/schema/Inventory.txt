@@ -1,0 +1,23 @@
+var Inventory=mongoose.model('Inventory',{
+    shop_id: String,
+    barcode: String,
+    price: String,
+    qty: String
+});
+var Inventory=mongoose.model('Inventory',{
+    name:String,
+    shop_id: String,
+    barcode: String,
+    price: String,
+    qty: String
+});
+var Inventory=mongoose.model('Inventory',{
+    product_id: String,
+    shop_id: String,
+    barcode: String,
+    cost: String,
+    qty: String,
+    schema:Number //0.02
+});
+
+

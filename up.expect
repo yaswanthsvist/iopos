@@ -1,0 +1,17 @@
+set timeout 3
+spawn sh 
+expect "$"
+spawn sudo -i
+expect "password"
+send "old password\r"
+expect "root"
+send "ls\r";
+expect "$"
+send "/root/mongodb/bin/mongod --dbpath /home/yaswanthm/iopos/server/data/mongo &\r"
+send "ls\r"
+expect "$"
+send "/root/redis-3.2.8/src/redis-server &\r"
+expect "$"
+send "node /home/yaswanthm/iopos/server/index.js &\r"
+expect "$"
+
