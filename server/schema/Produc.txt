@@ -1,0 +1,10 @@
+var Product=mongoose.model('Product',{
+    product_id: String,
+    barcode: String,
+    name: String,
+    cost: String,
+    qty: String,
+    brand:String,
+    schema:Number // 0.01
+});
+
